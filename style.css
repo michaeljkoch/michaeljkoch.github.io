@@ -39,10 +39,10 @@
     display: block;
 }
 
-/* #home .logo a {
+#home .logo a {
     text-decoration:  none;
     color: var(--main);
-} */
+}
 
 /* .navbar .logo {
     float: left;
