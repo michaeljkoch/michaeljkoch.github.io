@@ -1,106 +1,296 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
 
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 :root {
-    --scarlet: #CE0F3D;
-    --grey: rgb(215, 215, 215);
-    --white: #ffffff;
-    --black: #111;
+	--scarlet: #ce0f3d;
+	--grey: rgb(215, 215, 215);
+	--main: #7d8e83;
+	--grey-opac: rgb(248, 248, 248, 0.9);
+	--light-grey: #eae9e9;
+	--white: #ffffff;
+	--black: #111;
 }
 
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Oxygen', sans-serif;
-    font-weight: 100;
+#home {
+	background-image: url("images/DSC01855.jpeg");
+	background-color: #cccccc;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-attachment: fixed;
 }
 
-/* Style the top navigation bar */
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background-color: var(--white);
+#work, #about, #contact {
+	background-color: var(--light-grey);
 }
 
-nav .logo {
-    color: var(--scarlet);
+#home .logo a {
+	font-family: "Rock Salt", sans-serif;
+	color: rgb(88, 109, 88);
+    text-decoration:  none;
+	font-size: 24px;
+}
+
+.navbar {
+    position: relative;
+    display: block;
+}
+
+/* #home .logo a {
+    text-decoration:  none;
+    color: var(--main);
+} */
+
+/* .navbar .logo {
+    float: left;
+} */
+
+.navbar .nav {
+    float: right;
+}
+
+.nav li a {
+    float: left;
+    text-align: center;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 25px;
-    margin: 25px 0px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oxygen', sans-serif;
-    font-weight: 400;
-  }
-
-a {
-    color: var(--scarlet);
+    margin: 24px 32px;
     text-decoration: none;
+    color: var(--main);
+    font-size: 12px;
 }
 
-.large-text {
-    text-transform: uppercase;
+li {
+    display: inline;
+    text-align: left;
 }
 
-.small-text {
-    display: none;
+.nav li a:hover {
+    color: var(--light-grey);
+    text-decoration:  underline;
+    text-underline-offset: 6px;
 }
 
-a:hover {
-    color: black;
+a:visited {
+	text-decoration: none;
+	color: none;
 }
 
-section {
-    /* width: 50%; */
+/*--------------------------------------------------------------
+# Styling for under construction
+--------------------------------------------------------------*/
+.content {
+    color: var(--main);
     text-align: center;
     position: fixed;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-footer {
-    background: white;
-    position: fixed;
-    justify-items: center;
+.navbar {
     text-align: center;
-    margin: 15px 0px;
-    bottom: 0px;
+}
+
+/*--------------------------------------------------------------
+# Styling for nav bar on non home pages
+--------------------------------------------------------------*/
+#work .logo a, 
+#about .logo a,
+#contact .logo a {
+	font-family: "Rock Salt", sans-serif;
+	color: black;
+    text-decoration:  none;
+	font-size: 24px;
+}
+
+#work .links .work a,
+#about .links .about a, 
+#contact .links .contact a {
+    text-decoration:  underline;
+    text-underline-offset: 6px;
+    color: black;
+}
+
+#work .nav li a:hover,
+#about .nav li a:hover, 
+#contact .nav li a:hover {
+    color: black;
+}
+
+#work .navbar,
+#about .navbar,
+#contact .navbar {
+    height: 100.05px;
+}
+
+/*--------------------------------------------------------------
+# Start Work section
+--------------------------------------------------------------*/
+#work * {
+    box-sizing: border-box;
+}  
+
+#work .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+  
+/* Create four equal columns that sits next to each other */
+#work .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+  
+#work .column img {
+    margin-top: 8px;
+    vertical-align: middle;
     width: 100%;
-    text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------
+# Start About section
+--------------------------------------------------------------*/
+#about .headshot {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    position: relative;
+}
+
+#about * {
+    box-sizing: border-box;
+}  
+
+/* Create two equal columns that floats next to each other */
+#about .column {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    align-items: center;
+    height: auto;
+    margin: auto;
+}
+  
+  /* Clear floats after the columns */
+#about .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#about .row {
+    margin: 0px 72px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*--------------------------------------------------------------
+# Start Contact section
+--------------------------------------------------------------*/
+#contact .links .contact a{
+    text-decoration:  underline;
+    text-underline-offset: 6px;
+    color: black;
+}
+
+/*--------------------------------------------------------------
+# Start footer
+--------------------------------------------------------------*/
+footer {
+	/* background: white; */
+	position: fixed;
+	justify-items: center;
+	text-align: center;
+	margin: 15px 0px;
+	bottom: 0px;
+	width: 100%;
+	text-transform: uppercase;
+	font-size: 14px;
 }
 
 footer a {
-    color: black;
+	color: black;
+}
+
+footer p {
+	text-transform: uppercase;
 }
 
 .footer .footer-icon {
-    font-size: 25px;
-    color: black;
+	font-size: 25px;
+	color: black;
+    justify-content: center;
 }
 
 .footer .footer-icon:hover {
-    color: var(--scarlet);
+	color: var(--main);
 }
 
-@media screen and (max-width: 768px) {
-    .large-text {
-        display: none;
+/*--------------------------------------------------------------
+# Start mobile media section
+--------------------------------------------------------------*/
+@media screen and (max-width: 2048px) {
+	.text {
+		font-size: 16px;
+	}
+
+    body {
+        scroll-padding-top: 60px;
+        scroll-behavior: smooth;
+        margin: 12px 72px;
+        height: 100%;
+        font-family: "Oxygen";
+        font-weight: 100;
     }
 
-    .small-text {
-        display: inline;
-        justify-content: space-around;
-        font-size: 25px;
-        letter-spacing: 3px;
-        font-weight: 500;
+}
+
+@media screen and (max-width: 750px) {
+	.text {
+		font-size: 16px;
+	}
+
+    body {
+        scroll-padding-top: 60px;
+        scroll-behavior: smooth;
+        margin: 4px 10px;
+        height: 100%;
+        font-family: "Oxygen";
+        font-weight: 100;
+        font-size: 12px;
+    }
+
+    #work .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+      }
+
+    /*--------------------------------------------------------------
+    # Start about section
+    --------------------------------------------------------------*/
+    #about .column {
+        width: 100%;
+    }
+
+    #about .headshot {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        position: relative;
+    }
+
+    #about .row {
+        margin: 0px 0px;
     }
 }
