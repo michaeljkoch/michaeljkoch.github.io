@@ -29,7 +29,8 @@
 
 #home .logo a {
 	font-family: "Rock Salt", sans-serif;
-	color: rgb(88, 109, 88);
+	/* color: rgb(88, 109, 88); */
+    color: var(--main);
     text-decoration:  none;
 	font-size: 24px;
 }
@@ -37,11 +38,6 @@
 .navbar {
     position: relative;
     display: block;
-}
-
-#home .logo a {
-    text-decoration:  none;
-    color: var(--main);
 }
 
 /* .navbar .logo {
