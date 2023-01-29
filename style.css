@@ -67,7 +67,8 @@ body, * {
 .nav li a {
     text-align: center;
     text-transform: uppercase;
-    margin: 24px 32px;
+    /* margin: 24px 32px; */
+    margin: 24px 0px 24px 64px;
     text-decoration: none;
     color: var(--main);
     font-size: 12px;
@@ -282,6 +283,15 @@ a:visited {
         color: black;
         text-decoration:  underline;
         text-underline-offset: 6px;
+    }
+
+    .nav li a {
+        text-align: center;
+        text-transform: uppercase;
+        margin: 24px 32px;
+        text-decoration: none;
+        color: var(--main);
+        font-size: 12px;
     }
 
     .navbar {
