@@ -251,7 +251,7 @@ a:visited {
     body {
         scroll-padding-top: 60px;
         scroll-behavior: smooth;
-        margin: 0px 0px;
+        margin: 10px 0px 0px 0px;
         height: 100%;
         font-family: "Oxygen";
         font-weight: 50;
