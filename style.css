@@ -177,7 +177,7 @@ a:visited {
 /* Create two equal columns that floats next to each other */
 #about .column {
     float: left;
-    padding: 20px;
+    /* padding: 20px; */
     /* align-items: center; */
     /* vertical-align: middle; */
     height: auto;
