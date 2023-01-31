@@ -190,6 +190,7 @@ a:visited {
   
 .right {
     width: 60%;
+    padding: 20px 36px;
 }
 
 /* Clear floats after the columns */
