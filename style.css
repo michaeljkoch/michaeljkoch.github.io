@@ -163,9 +163,10 @@ a:visited {
 # Start About section
 --------------------------------------------------------------*/
 #about .headshot {
-    display: block;
+/*     display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
+    margin: 0px 0px 0px 38px;
     width: 100%;
     position: relative;
 }
