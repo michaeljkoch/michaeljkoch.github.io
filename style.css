@@ -7,9 +7,9 @@
 :root {
 	--scarlet: #ce0f3d;
 	--grey: rgb(215, 215, 215);
-	--main: #7d8e83;
+	--main: #545f58;
 	--grey-opac: rgb(248, 248, 248, 0.9);
-	--light-grey: #eae9e9;
+	--light-grey: #7e8f84;
 	--white: #ffffff;
 	--black: #111;
 }
@@ -37,7 +37,7 @@ body, * {
 	font-family: "Oxygen", sans-serif;
 	color: var(--main);
     text-decoration:  none;
-	font-size: 24px;
+	font-size: 28px;
 	text-transform: uppercase;
 	font-weight: 700;
 }
@@ -118,7 +118,7 @@ a:visited {
 	font-family: "Oxygen", sans-serif;
 	color: black;
     text-decoration:  none;
-	font-size: 24px;
+	font-size: 28px;
 	text-transform: uppercase;
 	font-weight: 700;
 }
