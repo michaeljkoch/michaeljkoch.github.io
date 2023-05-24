@@ -109,7 +109,7 @@ a:visited {
 # Styling for non home pages
 --------------------------------------------------------------*/
 #work, #about, #contact {
-	background-color: var(--light-grey);
+	background-color: whitesmoke;
 }
 
 #work .logo a, 
