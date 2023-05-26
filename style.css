@@ -40,7 +40,8 @@ body, * {
 	font-size: 28px;
 	text-transform: uppercase;
 	font-weight: 700;
-    letter-spacing: -2px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
 }
 
 .navbar {
@@ -122,7 +123,7 @@ a:visited {
 	font-size: 28px;
 	text-transform: uppercase;
 	font-weight: 700;
-    letter-spacing: -2px;
+    letter-spacing: 0px;
 
 }
 
