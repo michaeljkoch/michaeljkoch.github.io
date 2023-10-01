@@ -14,6 +14,12 @@
 	--black: #111;
 }
 
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+}
+
 .bold {
     font-weight: 500;
 }
@@ -24,36 +30,24 @@ body, * {
     margin: 0;
 }
 
-#home {
-	background-image: url("images/DSC01855.jpg");
-	background-color: #cccccc;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-    background-attachment: fixed;
+#home .navbar-active {
+    height: 55vh;
 }
 
-#home .logo a {
-	font-family: "Oxygen", sans-serif;
-	color: var(--main);
-    text-decoration:  none;
-	font-size: 28px;
-	text-transform: uppercase;
-	font-weight: 700;
-    letter-spacing: -1px;
-    word-spacing: 0px;
-}
+#photography *,
+#dsml *,
+#about * {
+    box-sizing: border-box;
+}  
+
+/* Navbar */
 
 .navbar {
     display: flex;
     justify-content: space-between;
     height: 10vh;
     align-items: center;
-    padding: 0px 36px;
-}
-
-.desc {
-    padding: 0px 36px;
+    padding: 0px 180px;
 }
 
 .navbar .logo {
@@ -107,16 +101,39 @@ a:visited {
 	color: none;
 }
 
+/* Home */
+
+#home {
+	background-image: url("images/DSC01855.jpg");
+	background-color: #cccccc;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+#home .logo a {
+	font-family: "Oxygen", sans-serif;
+	color: var(--main);
+    text-decoration:  none;
+	font-size: 28px;
+	text-transform: uppercase;
+	font-weight: 700;
+    letter-spacing: -1px;
+    word-spacing: 0px;
+}
+
 /*--------------------------------------------------------------
 # Styling for non home pages
 --------------------------------------------------------------*/
-#work, #about, #contact {
+#photography, #dsml, #about, #contact {
 	background-color: whitesmoke;
 }
 
-#work .logo a, 
-#about .logo a,
-#contact .logo a {
+#photography .logo a, 
+#dsml .logo a, 
+#about .logo a {
 	font-family: "Oxygen", sans-serif;
 	color: black;
     text-decoration:  none;
@@ -127,119 +144,49 @@ a:visited {
 
 }
 
-#work .links .work a,
-#about .links .about a, 
-#contact .links .contact a {
+#photography .links .photography a,
+#dsml .links .dsml a,
+#about .links .about a {
     text-decoration:  underline;
     text-underline-offset: 6px;
     color: black;
 }
 
-#work .nav li a:hover,
-#about .nav li a:hover, 
-#contact .nav li a:hover {
+#photography .nav li a:hover,
+#dsml .nav li a:hover,
+#about .nav li a:hover {
     color: black;
 }
 
 /*--------------------------------------------------------------
 # Start Work section
 --------------------------------------------------------------*/
-#work * {
-    box-sizing: border-box;
-}  
-
-#work .row {
+#photography .row {
     display: flex;
     flex-wrap: wrap;
     padding: 0 0 15px;
 }
   
 /* Create four equal columns that sits next to each other */
-#work .column {
+#photography .column {
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
 }
   
-#work .column img {
+#photography .column img {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
 }
 
 /*--------------------------------------------------------------
-# Start About section
+# Start Work section
 --------------------------------------------------------------*/
-#about .headshot {
-/*     display: block;
-    margin-left: auto;
-    margin-right: auto; */
-    margin: 0px 0px 0px 38px;
-    width: 100%;
-    position: relative;
-}
-
-#about * {
-    box-sizing: border-box;
-}  
-
-/* Create two equal columns that floats next to each other */
-#about .column {
-    float: left;
-    /* padding: 20px; */
-    /* align-items: center; */
-    /* vertical-align: middle; */
-    height: auto;
-    /* margin: auto; */
-}
-
-.left {
-    width: 40%;
-    /*     padding: 20px 0px; */
-}
-  
-.right {
-    width: 60%;
-    padding: 20px 36px;
-}
-
-/* Clear floats after the columns */
-#about .row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-#about img {
-    max-width: 80%;
-    max-height: 100%;
-    padding: 5px;
-    border: 1px solid var(--main);
-}
-
-#about .column p {
-    margin: 10px 0px;
-}
 
 /*--------------------------------------------------------------
-# Start Contact section
+# Start Footer section
 --------------------------------------------------------------*/
-#contact .links .contact a{
-    text-decoration:  underline;
-    text-underline-offset: 6px;
-    color: black;
-}
-
-/*--------------------------------------------------------------
-# Start footer section
---------------------------------------------------------------*/
-.social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 0 40px 0px;
-}
-
 .social a {
     margin: 0px 5px;
     color: var(--main);
@@ -249,6 +196,29 @@ a:visited {
 
 .social a:hover {
     color: black;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;            /* Footer height */
+    padding: 0px 180px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    font-size: small;
+}
+
+.content {
+    padding-bottom: 3rem;    /* Footer height */
+    padding: 0px 180px 4rem;
 }
 
 /*--------------------------------------------------------------
@@ -262,32 +232,42 @@ a:visited {
     body {
         scroll-padding-top: 60px;
         scroll-behavior: smooth;
-        margin: 10px 0px 0px 0px;
         height: 100%;
         font-family: "Oxygen";
         font-weight: 50;
     }
 
-    #about .row {
-        display: flex;
-        align-items: center;
-        height: 75vh;
-        margin: 0px 0px;
-        padding: 0px 0px 40px;
+    #dsml .content div {
+        padding: 325px 0 0 0;
     }
 
-    #work .row {
+    #dsml .content {
         display: flex;
-        flex-wrap: wrap;
-        padding: 0 32px 40px;
+        justify-content: space-evenly;
     }
 
+    #dsml .content-off {
+        display: none
+    }
+
+    #about .content {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #about .content-off {
+        display: none
+    }
+
+    #about .content div {
+        padding: 175px 0px 0px 0px;
+    }
 }
 
 /*--------------------------------------------------------------
 # Start mobile media section
 --------------------------------------------------------------*/
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 990px) {
 	.text {
 		font-size: 16px;
 	}
@@ -295,16 +275,10 @@ a:visited {
     body {
         scroll-padding-top: 60px;
         scroll-behavior: smooth;
-        margin: 0px 10px;
+        margin: 0px 0px;
         height: 100%;
         font-family: "Oxygen";
         font-weight: 50;
-    }
-
-    #home .nav li a:hover {
-        color: black;
-        text-decoration:  underline;
-        text-underline-offset: 6px;
     }
 
     .nav li a {
@@ -319,8 +293,8 @@ a:visited {
     .navbar {
         flex-direction: column;
         padding: 60px 0px 0px;
-        margin-bottom: 10px;
-        height: 0vh;/* this is where the height needs fixed */
+        /* margin-bottom: 10px; */
+        height: 0vh;
     }
 
     .navbar .logo {
@@ -341,6 +315,7 @@ a:visited {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         /* top: 30px; */
         /* height: 1000vh; */
         gap: 15px;
@@ -352,8 +327,28 @@ a:visited {
     }
 
     .navbar-active {
-        display: absolute;
-        height: 25vh;
+        /* display: absolute; */
+        height: 100vh;
+    }
+
+    .content-off {
+        display: none;
+    }
+
+    .footer-off {
+        display: none;
+    }
+
+    .menu-btn-off {
+        display: none;
+    }
+
+    .close {
+        display: none;
+    }
+
+    .close.show {
+        display: block;
     }
 
     .navbar .menu-btn {
@@ -375,60 +370,76 @@ a:visited {
         font-size: 14px;
     }
 
-    .social {
-        font-size: 16px;
-        padding: 0 0 30px 0px;
+    .copyright {
+        display: none;
+    }
+
+    .footer-content {
+        justify-content: space-evenly;
     }
 
     /* .navbar .menu-btn {
         float: right;
     } */
 
-    #work .column {
+    #photography .column {
         -ms-flex: 100%;
         flex: 100%;
         max-width: 100%;
     }
 
-    #work .column img {
+    #photography .column img {
         padding: 0px 0px 12px;
     }
 
-    #work .row {
+    #photography .row {
         margin: 0px 7px 0px 7px;
+        padding: 0px
     }
 
     .desc {
-        padding: 0px 0px 0px 10px;
+        padding: 0px 10px 0px 10px;
     }
 
-    /*--------------------------------------------------------------
-    # Start about section
-    --------------------------------------------------------------*/
-    #about .column {
-        padding: 8px 0px 10px 0px;
-        width: 100%;
+    .content {
+        padding: 8px 12px 4.5rem;
     }
 
-    #about .headshot {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        height: 75%;
-        position: relative;
+    .content div {
+        padding: 0px 10px;
     }
 
-    #about .row {
-        margin: 0px 10px;
+    #dsml .content div {
+        padding: 350px 0 0 0;
     }
 
-    #about .right {
-        padding: 0px 0px 12px 0px;
+    #dsml .content {
+        display: flex;
+        justify-content: space-evenly;
     }
 
-    #about img {
-        max-width: 100%;
+    #dsml .content-off {
+        display: none
     }
 
+    #about .content {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #about .content-off {
+        display: none
+    }
+
+    #about .content div {
+        padding: 175px 10px 0px 10px;
+    }
+
+    .content #bio {
+        justify-content: center;
+    }
+
+    .footer {
+        padding: 0px 60px;
+    }
 }
