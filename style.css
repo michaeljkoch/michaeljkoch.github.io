@@ -273,10 +273,10 @@ a:visited {
 	}
 
     body {
-        scroll-padding-top: 60px;
+        /* scroll-padding-top: 60px; */
         scroll-behavior: smooth;
         margin: 0px 0px;
-        height: 100%;
+        min-height: 90vh;
         font-family: "Oxygen";
         font-weight: 50;
     }
@@ -317,7 +317,7 @@ a:visited {
         justify-content: center;
         align-items: center;
         /* top: 30px; */
-        /* height: 1000vh; */
+        /* height: 100vh; */
         gap: 15px;
     }
 
@@ -410,7 +410,7 @@ a:visited {
     }
 
     #dsml .content div {
-        padding: 250px 0 0 0;
+        padding: 300px 0 0 0;
     }
 
     #dsml .content {
@@ -432,7 +432,7 @@ a:visited {
     }
 
     #about .content div {
-        padding: 125px 10px 0px 10px;
+        padding: 100px 10px 0px 10px;
     }
 
     .content #bio {
