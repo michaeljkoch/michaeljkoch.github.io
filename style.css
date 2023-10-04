@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap');
 
 /*--------------------------------------------------------------
 # General
@@ -14,86 +15,96 @@
 	--black: #111;
 }
 
+html {
+    min-height: 100%; /* Look, it's not fixed anymore! */
+    display: flex;
+    flex-direction: column;
+}
+
 body {
-    position: relative;
-    min-height: 100vh;
-    margin: 0;
-}
-
-.bold {
-    font-weight: 500;
-}
-
-body, * {
-    font-weight: 50;
-    padding: 0;
-    margin: 0;
-}
-
-#home .navbar-active {
-    height: 55vh;
-}
-
-#photography *,
-#dsml *,
-#about * {
-    box-sizing: border-box;
-}  
-
-/* Navbar */
-
-.navbar {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    height: 10vh;
-    align-items: center;
-    padding: 0px 180px;
+    margin: 0rem 20rem;
+    background-color: whitesmoke;
+    color: var(--main);
+    flex-grow: 1;
 }
 
-.navbar .logo {
+* {
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Nunito Sans', sans-serif; */
+    font-family: Palatino;
+}
+
+#photography .links .photography a,
+#about .links .about a, 
+#dsml .links .dsml a {
+    color: black;
+}
+
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+nav {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid;
+    border-bottom-color: var(--main);
+    border-bottom-width: thin;
+    padding: 20px 0px 10px 0px;
 }
 
-.navbar .nav {
+nav .logo a {
+	color: var(--main);
+    text-decoration:  none;
+	font-size: 28px;
+	text-transform: uppercase;
+    letter-spacing: -1px;
+    word-spacing: 0px;
+    font-weight: bolder;
+}
+
+nav .logo h4 {
+    /* font-weight: 1000; */
+    font-weight: bolder;
+}
+
+nav .nav-links {
     display: flex;
     justify-content: flex-end; 
     width: 60%;
     align-items: center;
 }
 
-.navbar .nav .links {
+nav .nav-links .links {
     /* display: flex; this line changes if menu shows or not */
     display: flex;
     justify-content: space-around;
-}
-
-.nav li a {
-    text-align: center;
-    text-transform: uppercase;
-    /* margin: 24px 32px; */
-    margin: 24px 0px 24px 64px;
-    text-decoration: none;
-    color: var(--main);
-    font-size: 12px;
-}
-
-.navbar .menu-btn p {
-    text-transform: uppercase;
-    color: var(--main);
-}
-
-.navbar .menu-btn {
-    display: none;
 }
 
 li {
     list-style: none;
 }
 
-.nav li a:hover {
-    color: var(--light-grey);
-    text-decoration:  underline;
-    text-underline-offset: 6px;
+nav li a {
+    text-align: center;
+    text-transform: uppercase;
+    /* margin: 24px 32px; */
+    margin: 0px 0px 24px 64px;
+    text-decoration: none;
+    color: var(--main);
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+nav li a:hover {
+    color: var(--black);
+    /* text-decoration:  underline; */
+    /* text-underline-offset: 6px; */
 }
 
 a:visited {
@@ -101,61 +112,34 @@ a:visited {
 	color: none;
 }
 
-/* Home */
-
-#home {
-	background-image: url("images/DSC01855.jpg");
-	background-color: #cccccc;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-    background-attachment: fixed;
-    min-height: 100vh;
-}
-
-#home .logo a {
-	font-family: "Oxygen", sans-serif;
-	color: var(--main);
-    text-decoration:  none;
-	font-size: 28px;
-	text-transform: uppercase;
-	font-weight: 700;
-    letter-spacing: -1px;
-    word-spacing: 0px;
+.menu-btn {
+    display: none;
 }
 
 /*--------------------------------------------------------------
-# Styling for non home pages
+# Content
 --------------------------------------------------------------*/
-#photography, #dsml, #about, #contact {
-	background-color: whitesmoke;
+.content {
+    padding-top: 2rem;
+    /* padding-bottom: 10px; */
+    text-align: center;
+    text-decoration: none;
+    margin: 10rem 2rem;
 }
 
-#photography .logo a, 
-#dsml .logo a, 
-#about .logo a {
-	font-family: "Oxygen", sans-serif;
-	color: black;
-    text-decoration:  none;
-	font-size: 28px;
-	text-transform: uppercase;
-	font-weight: 700;
-    letter-spacing: -1px;
-
+#about .content {
+    padding-top: 2rem;
+    text-align: center;
+    margin: 0rem;
 }
 
-#photography .links .photography a,
-#dsml .links .dsml a,
-#about .links .about a {
-    text-decoration:  underline;
-    text-underline-offset: 6px;
-    color: black;
+.content .alert {
+    text-transform: uppercase;
+    text-align: center;
 }
 
-#photography .nav li a:hover,
-#dsml .nav li a:hover,
-#about .nav li a:hover {
-    color: black;
+.content .desc p {
+    padding-top: 5px;
 }
 
 /*--------------------------------------------------------------
@@ -164,13 +148,12 @@ a:visited {
 #photography .row {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 0 15px;
 }
   
 /* Create four equal columns that sits next to each other */
 #photography .column {
-    flex: 25%;
-    max-width: 25%;
+    flex: 50%;
+    max-width: 50%;
     padding: 0 4px;
 }
   
@@ -181,206 +164,165 @@ a:visited {
 }
 
 /*--------------------------------------------------------------
-# Start Work section
+# Footer
 --------------------------------------------------------------*/
+.footer {
+    display: flex;
+    /* flex-direction: row; */
+    flex-direction: column-reverse;
+    /* justify-content: space-between; */
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    /* height: 3rem; */
+    /* padding-bottom: 20px; */
+    padding: 2rem 0rem;
+}
 
-/*--------------------------------------------------------------
-# Start Footer section
---------------------------------------------------------------*/
+.footer .social {
+    display: none;
+    /* justify-content: flex-end;  */
+    /* justify-content: space-between; */
+    /* width: 20%; */
+    /* align-items: center; */
+    /* margin-bottom: 10px; */
+}
+
 .social a {
     margin: 0px 5px;
     color: var(--main);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 12px;
 }
 
 .social a:hover {
     color: black;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 3rem;            /* Footer height */
-    padding: 0px 180px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.copyright {
-    font-size: small;
-}
-
-.content {
-    padding-bottom: 3rem;    /* Footer height */
-    padding: 0px 180px 4rem;
+.footer .copyright {
+    text-transform: uppercase;
+    font-size: 12px;
 }
 
 /*--------------------------------------------------------------
-# Start desktop media section
+# Page specifics
 --------------------------------------------------------------*/
-@media screen and (min-width: 911px){
-	.text {
-		font-size: 16px;
-	}
-
-    body {
-        scroll-padding-top: 60px;
-        scroll-behavior: smooth;
-        height: 100%;
-        font-family: "Oxygen";
-        font-weight: 50;
-    }
-
-    #dsml .content div {
-        padding: 325px 0 0 0;
-    }
-
-    #dsml .content {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    #dsml .content-off {
-        display: none
-    }
-
-    #about .content {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    #about .content-off {
-        display: none
-    }
-
-    #about .content div {
-        padding: 175px 0px 0px 0px;
-    }
+#index #index .nav-links #index {
+    display: none;
 }
 
 /*--------------------------------------------------------------
-# Start mobile media section
+# Mobile view
 --------------------------------------------------------------*/
-@media screen and (max-width: 990px) {
-	.text {
-		font-size: 16px;
-	}
-
+@media screen and (max-width: 1501px) {
+    
     body {
-        scroll-padding-top: 60px;
-        scroll-behavior: smooth;
-        margin: 0px 0px;
-        height: 100%;
-        font-family: "Oxygen";
+        margin: 10px;
         font-weight: 50;
     }
 
-    .nav li a {
+    nav {
+        padding: 10px 0px;
         text-align: center;
-        text-transform: uppercase;
-        margin: 24px 32px;
-        text-decoration: none;
-        color: var(--main);
-        font-size: 12px;
+        display: block;
     }
 
-    .navbar {
-        flex-direction: column;
-        padding: 60px 0px 0px;
-        /* margin-bottom: 10px; */
-        height: 0vh;
+    nav .logo span {
+        font-size: 18px;
     }
-
-    .navbar .logo {
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    .navbar .nav {
+    
+    nav .nav-links {
         display: none;
-        justify-content: center;
-        align-items: center;
-        height: 25vh;
-        width: 100%;
+        left: 0;
     }
 
-    .navbar .nav .links {
-        /* display: flex; this line changes the links showing */
+    nav .nav-links .links {
+        padding: 0;
+        width: 100%;
+        top: 0;
+    }
+
+    .navbar-active {
+        background-color: red;
+    }
+
+    nav li a {
+        margin: 0;
+    }
+
+    nav .nav-active {
         display: flex;
+        position: absolute;
+        width: 100%;
+        padding-top: 50px;
+    }
+
+    nav .links {
+        position: absolute;
+        display: block;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         /* top: 30px; */
-        /* height: 1000vh; */
+        /* background-color: red; */
         gap: 15px;
+        left: 0;
+        width: 100%;
+        height: 25vh;
     }
 
-    .navbar .nav-active {
-        display: flex;
-        height: 100%;
-    }
-
-    .navbar-active {
-        /* display: absolute; */
-        height: 100vh;
-    }
-
-    .content-off {
+    nav .social {
         display: none;
     }
 
-    .footer-off {
+    .menu-btn {
         display: none;
     }
+    
+    /* .menu-btn {
+        display: block;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: bolder;
+    } */
 
     .menu-btn-off {
         display: none;
     }
 
-    .close {
+    .menu-btn .close {
         display: none;
     }
-
-    .close.show {
-        display: block;
+    
+    .menu-btn .close.show {
+        display: flex;
     }
 
-    .navbar .menu-btn {
-        cursor: pointer;
-        display: block;
-        position: absolute;
-        right: 20px;
-        top: 30px;
+    .footer {
+        flex-direction: column;
     }
 
-    .navbar .logo {
-        display: block;
-        position: absolute;
-        left: 20px;
-        top: 20px;
+    .footer .social {
+        justify-content: space-between; 
+        /* width: 20%; */
+        align-items: center;
     }
 
-    .navbar .menu-btn p {
-        font-size: 14px;
+    .content {
+        margin: 0;
+        padding: 5rem 0rem;
     }
 
-    .copyright {
-        display: none;
+    .content#about {
+        margin: 0rem 2rem;
     }
 
-    .footer-content {
-        justify-content: space-evenly;
+    #photography .links .photography a,
+    #dsml .links .dsml a,
+    #about .links .about a {
+        color: black;
     }
-
-    /* .navbar .menu-btn {
-        float: right;
-    } */
 
     #photography .column {
         -ms-flex: 100%;
@@ -388,58 +330,4 @@ a:visited {
         max-width: 100%;
     }
 
-    #photography .column img {
-        padding: 0px 0px 12px;
-    }
-
-    #photography .row {
-        margin: 0px 7px 0px 7px;
-        padding: 0px
-    }
-
-    .desc {
-        padding: 0px 10px 0px 10px;
-    }
-
-    .content {
-        padding: 8px 12px 4.5rem;
-    }
-
-    .content div {
-        padding: 0px 10px;
-    }
-
-    #dsml .content div {
-        padding: 350px 0 0 0;
-    }
-
-    #dsml .content {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    #dsml .content-off {
-        display: none
-    }
-
-    #about .content {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    #about .content-off {
-        display: none
-    }
-
-    #about .content div {
-        padding: 175px 10px 0px 10px;
-    }
-
-    .content #bio {
-        justify-content: center;
-    }
-
-    .footer {
-        padding: 0px 60px;
-    }
 }

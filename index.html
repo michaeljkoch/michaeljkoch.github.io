@@ -4,7 +4,7 @@
 <head>
     <title>Michael Koch</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/plot-logo.png">
+    <link rel="icon" href="/dev/3.0.0/images/favicon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -16,39 +16,100 @@
     <meta property="og:title" content="Michael Koch"/>
     <meta property="og:url" content="https://www.mjkoch.com"/>
     <meta property="og:type" content="website"/>
-    <meta name="description" content="Michael Koch's personal website."/>
 </head>
 
-<body id="home">
-
-    <!-- <div id="image"></div> -->
+<body id="index">
     
-    <!-- start home -->
-    <div class="navbar">
+    <!-- start home section -->
+    <nav>
         <div class="logo">
             <h4>
-                <a href="/">Michael Koch</a>
+                <!-- <a href="/">michael koch</a> -->
+                <a href="/"><span style="font-size: 32px;">m</span>ichael <span style="font-size: 32px;">k</span>och</a>
             </h4>
         </div>
-        <div class="nav">
+        <div class="nav-links">
             <ul class="links">
-                <li>
-                    <a href="photography">photography</a>
+                <li class="index">
+                    <a href="#about">about</a> 
                 </li>
-                <li>
-                    <a href="ds-ml">ds/ml</a>
+                <li class="dsml">
+                    <a href="#dsml">ds/ml</a>
                 </li>
-                <li>
-                    <a href="about">About</a>
+                <li class="photography">
+                    <a href="#photography">photography</a>
                 </li>
-                <!-- <li>
-                    <a href="contact.html">Contact</a>
-                </li> -->
             </ul>
+        </div>
+        <div class="social">
+            <a href="https://www.instagram.com/m_j_koch" target="_blank" class="fa fa-instagram"></a>
+            <a href="https://www.github.com/michaeljkoch" target="_blank" class="fa fa-github"></a>
+            <a href="https://www.linkedin.com/in/mjkoch" target="_blank" class="fa fa-linkedin"></a>
         </div>
         <div class="menu-btn">
             <p>menu</p>
             <p class="close">close</p>
+        </div>
+    </nav>
+
+    <div class="content" id="about">
+        <p>Michael is a data analyst based out of Cleveland, Ohio. He graduated from The Ohio State University with a bachelor's degree in data analytics and is currently a master's student studying applied statistics at Cleveland State University.</p>
+            <br>
+            <p>In his freetime, he loves to travel, learn new languages and cultures, and capture it all through photography.</p>
+            <br>
+            <p>You can often find him exploring with his camera in hand, otherwise he is probably watching his favorite foreign language Netflix show with his cat, Bernie, or following the latest news surounding European football (¡Hala Madrid!).</p>
+            <!-- <p>Some of Michael's other interests include linguistics, international relations, and European football (come on you blues!).</p> -->
+            <br>
+            <p>Please don't hesisitate to reach out with any questions. If you are interested in chatting, you can send an email to michael@mjkoch.com.</p>
+    </div>
+
+    <div class="content" id="dsml">
+        <div class="alert">
+            section under construction...
+        </div>
+    </div>
+
+    <div class="content" id="photography">
+        <div class="desc">
+            <h3 class="bold">Spain</h3>
+            <p><em>Madrid, Toledo, Málaga, Granada, Ronda</em></p>
+        </div>
+    
+        <div class="row">
+            <div class="column">
+                <img src="images/work/DSC01224.jpg">
+                <img src="images/work/DSC01234.jpg">
+                <img src="images/work/DSC01259.jpg">
+                <img src="images/work/DSC01271.jpg">
+                <img src="images/work/DSC01833.jpg">
+            </div>
+            <div class="column">
+                <img src="images/work/DSC01349.jpg">
+                <img src="images/work/DSC01408.jpg">
+                <img src="images/work/DSC01591.jpg">
+                <img src="images/work/DSC01421.jpg">
+                <img src="images/work/DSC01321.jpg">
+            </div>
+            <div class="column">
+                <img src="images/work/DSC01459.jpg">
+                <img src="images/work/DSC01371.jpg">
+                <img src="images/work/DSC01579.jpg">
+                <img src="images/work/DSC01679.jpg">
+                <img src="images/work/DSC01735.jpg">
+              </div>
+              <div class="column">
+                <img src="images/work/DSC01810.jpg">
+                <img src="images/work/DSC01818.jpg">
+                <img src="images/work/DSC01855.jpg">
+                <img src="images/work/DSC01806.jpg">
+                <img src="images/work/DSC01881.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="copyright">
+            Copyright &copy; 2021-2023 Michael Koch
         </div>
     </div>
 
