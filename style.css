@@ -25,7 +25,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0rem 20rem;
+    margin: 2rem 15rem;
+    padding: 0;
     background-color: whitesmoke;
     color: var(--main);
     flex-grow: 1;
@@ -38,99 +39,93 @@ body {
     font-family: Palatino;
 }
 
-#photography .links .photography a,
-#about .links .about a, 
-#dsml .links .dsml a {
-    color: black;
-}
 
-/*--------------------------------------------------------------
-# Navbar
---------------------------------------------------------------*/
 nav {
     display: flex;
-    flex-direction: row;
+    position: relative;
     justify-content: space-between;
     align-items: center;
+    color: var(--main);
     border-bottom: solid;
     border-bottom-color: var(--main);
     border-bottom-width: thin;
-    padding: 20px 0px 10px 0px;
 }
 
-nav .logo a {
-	color: var(--main);
-    text-decoration:  none;
-	font-size: 28px;
-	text-transform: uppercase;
-    letter-spacing: -1px;
-    word-spacing: 0px;
-    font-weight: bolder;
+.logo a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--main);
+    padding-right: 15rem;
 }
 
-nav .logo h4 {
-    /* font-weight: 1000; */
-    font-weight: bolder;
+.nav-links {
+    height: 100%;
 }
 
-nav .nav-links {
+.nav-links ul {
     display: flex;
-    justify-content: flex-end; 
-    width: 60%;
-    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-nav .nav-links .links {
-    /* display: flex; this line changes if menu shows or not */
-    display: flex;
-    justify-content: space-around;
-}
-
-li {
+.nav-links li {
     list-style: none;
 }
 
-nav li a {
-    text-align: center;
-    text-transform: uppercase;
-    /* margin: 24px 32px; */
-    margin: 0px 0px 24px 64px;
+.nav-links li a {
+    display: block;
     text-decoration: none;
+    padding-left: 1rem;
     color: var(--main);
+    text-transform: uppercase;
     font-size: 12px;
-    letter-spacing: 1px;
 }
 
-nav li a:hover {
-    color: var(--black);
-    /* text-decoration:  underline; */
-    /* text-underline-offset: 6px; */
+.nav-links li a:hover {
+    color: black;
 }
 
-a:visited {
+#index .nav-links .index a,
+#dsml .nav-links .dsml a,
+#photography .nav-links .photography a {
+    color: black;
+}
+
+.nav-links li a:visited {
 	text-decoration: none;
 	color: none;
 }
 
 .menu-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 0.75rem;
+    right: 0rem;
     display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    text-transform: uppercase;
+    font-size: 10px;
 }
 
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-.content {
-    padding-top: 2rem;
-    /* padding-bottom: 10px; */
-    text-align: center;
+.menu-btn .open {
+    cursor: pointer;
+}
+
+.menu-btn p:hover {
+    color: black;
+}
+
+.social a {
+    padding-left: 5px;
     text-decoration: none;
-    margin: 10rem 2rem;
+    color: var(--main);
 }
 
-#about .content {
-    padding-top: 2rem;
-    text-align: center;
-    margin: 0rem;
+.social a:hover {
+    color: black;
 }
 
 .content .alert {
@@ -138,12 +133,13 @@ a:visited {
     text-align: center;
 }
 
-.content .desc p {
-    padding-top: 5px;
+.content {
+    margin: 2rem 0rem;
+    text-align: center;
 }
 
 /*--------------------------------------------------------------
-# Start Work section
+# Photography
 --------------------------------------------------------------*/
 #photography .row {
     display: flex;
@@ -163,41 +159,15 @@ a:visited {
     width: 100%;
 }
 
+.content .desc p {
+    padding-top: 5px;
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .footer {
-    display: flex;
-    /* flex-direction: row; */
-    flex-direction: column-reverse;
-    /* justify-content: space-between; */
-    align-items: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    /* height: 3rem; */
-    /* padding-bottom: 20px; */
-    padding: 2rem 0rem;
-}
-
-.footer .social {
-    display: none;
-    /* justify-content: flex-end;  */
-    /* justify-content: space-between; */
-    /* width: 20%; */
-    /* align-items: center; */
-    /* margin-bottom: 10px; */
-}
-
-.social a {
-    margin: 0px 5px;
-    color: var(--main);
-    text-decoration: none;
-    font-size: 12px;
-}
-
-.social a:hover {
-    color: black;
+    text-align: center;
 }
 
 .footer .copyright {
@@ -205,71 +175,21 @@ a:visited {
     font-size: 12px;
 }
 
-/*--------------------------------------------------------------
-# Page specifics
---------------------------------------------------------------*/
-#index #index .nav-links #index {
-    display: none;
+@media (max-width: 1200px) {
+    .logo a {
+        padding-right: 0;
+    }
 }
 
-/*--------------------------------------------------------------
-# Mobile view
---------------------------------------------------------------*/
-@media screen and (max-width: 1501px) {
-    
+@media (max-width: 1024px) {
     body {
-        margin: 10px;
-        font-weight: 50;
+        margin: 1rem;
+        padding: 0;
     }
 
     nav {
-        padding: 10px 0px;
-        text-align: center;
-        display: block;
-    }
-
-    nav .logo span {
-        font-size: 18px;
-    }
-    
-    nav .nav-links {
-        display: none;
-        left: 0;
-    }
-
-    nav .nav-links .links {
-        padding: 0;
-        width: 100%;
-        top: 0;
-    }
-
-    .navbar-active {
-        background-color: red;
-    }
-
-    nav li a {
-        margin: 0;
-    }
-
-    nav .nav-active {
-        display: flex;
-        position: absolute;
-        width: 100%;
-        padding-top: 50px;
-    }
-
-    nav .links {
-        position: absolute;
-        display: block;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* top: 30px; */
-        /* background-color: red; */
-        gap: 15px;
-        left: 0;
-        width: 100%;
-        height: 25vh;
+        align-items: flex-start;
     }
 
     nav .social {
@@ -277,57 +197,119 @@ a:visited {
     }
 
     .menu-btn {
-        display: none;
-    }
-    
-    /* .menu-btn {
-        display: block;
-        text-transform: uppercase;
-        font-size: 12px;
-        font-weight: bolder;
-    } */
-
-    .menu-btn-off {
-        display: none;
+        display: flex;
+        align-items: flex-end;
     }
 
     .menu-btn .close {
         display: none;
     }
-    
-    .menu-btn .close.show {
+
+    .menu-btn .close.active {
         display: flex;
     }
 
-    .footer {
+    .menu-btn .open.active {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-links ul {
+        width: 100%;
         flex-direction: column;
     }
 
-    .footer .social {
-        justify-content: space-between; 
-        /* width: 20%; */
-        align-items: center;
+    .nav-links ul li {
+        text-align: center;
     }
 
-    .content {
-        margin: 0;
-        padding: 5rem 0rem;
+    .nav-links ul li a {
+        padding: .5rem 1rem;
     }
 
-    .content#about {
-        margin: 0rem 2rem;
+    .nav-links.active {
+        display: flex;
+        margin: 1rem 0rem;
     }
 
-    #photography .links .photography a,
-    #dsml .links .dsml a,
-    #about .links .about a {
-        color: black;
+    .footer {
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 1rem;
+        padding: 0;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .social {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .menu-btn .close {
+        display: none;
+    }
+
+    .menu-btn .close.active {
+        display: flex;
+    }
+
+    .menu-btn .open.active {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav-links ul li {
+        text-align: center;
+    }
+
+    .nav-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+        margin: 1rem 0rem;
     }
 
     #photography .column {
         -ms-flex: 100%;
         flex: 100%;
         max-width: 100%;
+        padding: 0;
+    }
+
+    .footer {
+        margin-bottom: 1rem;
+    }
+
+    #photography .column img {
+        margin-top: 1rem;
     }
 
 }
