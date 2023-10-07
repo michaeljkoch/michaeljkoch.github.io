@@ -76,7 +76,7 @@ nav {
 .nav-links li a {
     display: block;
     text-decoration: none;
-    padding-left: 1rem;
+    margin-left: 1rem;
     color: var(--main);
     text-transform: uppercase;
     font-size: 12px;
@@ -180,7 +180,7 @@ nav {
     padding-bottom: 0.5rem;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
     .logo a {
         padding-right: 0;
     }
@@ -233,12 +233,18 @@ nav {
     }
 
     .nav-links ul li a {
-        padding: .5rem 1rem;
+        margin: .5rem 0rem;
+        padding: 0;
     }
 
     .nav-links.active {
         display: flex;
         margin: 1rem 0rem;
+    }
+
+    .nav-links.active li {
+        display: flex;
+        justify-content: center;
     }
 
     .footer {
@@ -295,10 +301,6 @@ nav {
 
     .nav-links ul li {
         text-align: center;
-    }
-
-    .nav-links ul li a {
-        padding: .5rem 1rem;
     }
 
     .nav-links.active {
