@@ -176,11 +176,8 @@ nav {
 }
 
 .footer .social {
-    padding-bottom: 0.5rem;
-}
-
-.footer .social {
     display: none;
+    padding-bottom: 0.5rem;
 }
 
 @media (max-width: 1200px) {
