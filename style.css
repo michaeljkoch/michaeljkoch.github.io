@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -33,11 +41,10 @@ body {
 
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     /* border-top: 1px solid #d8dce1; */
     border-bottom: 1px solid #d8dce1;
     position: -webkit-sticky;
-    top: 0;
     background-color: var(--white);
     /* width: 100%; */
     align-items: center;
@@ -45,27 +52,47 @@ body {
 
 #logo {
     margin: 10px 18px;
+    width: 120px;
+}
+
+#logo a {
+    text-decoration: none;
+    color: var(--black);
+    font-family: "HelveticaNeue-Bold";
+    font-size: 14pt;
 }
 
 nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    gap: 100px;
     margin: 10px 18px;
+    /* width: 50vw */
 }
 
 .nav-links {
     display: flex;
+    flex-direction: row;
     padding: 0;
     margin: 0;
-    width: 100px;
+    /* width: 120px; */
     justify-content: space-between;
+    gap: 50px;
+    align-items: center;
 }
 
 .nav-links li {
     list-style: none;
+    display: flex;
 }
 
 .nav-links li a {
     text-decoration: none;
     color: var(--black);
+    text-transform: uppercase;
+    font-size: 8pt;
+    font-family: "HelveticaNeue-Medium";
 }
 
 .social a {
@@ -74,11 +101,27 @@ nav {
 }
 
 .social {
-    margin: 10px 18px;
+    /* margin: 10px 18px; */
+    width: 120px;
+    /* text-align: center; */
+    display: flex;
+    /* justify-content: space-evenly; */
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.fa-envelor {
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.content {
+    padding: 10px 18px;
+    text-align: justify;
 }
 
 .footer {
-    margin: 10px 18px;
+    margin: 24px 18px;
     text-align: center;
     font-size: 8pt;
 }
@@ -87,6 +130,158 @@ nav {
     justify-content: center;
 }
 
-.content {
+.menu-btn {
+    display: none;
+}
+
+.menu-content {
+    display: none;
+}
+
+.content#work {
     text-align: center;
+    text-transform: uppercase;
+    font-size: 10pt;
+}
+
+
+/*--------------------------------------------------------------
+# Mobile
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #logo {
+        margin: 10px 12px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: normal;
+        position: absolute;
+        padding: 100px 0px 0px 0px;
+        margin: 0px;
+        gap: 100px;
+        left: 0;
+        right: 0;
+        top: 45px;
+        height: 95vh;
+        background-color: #fff;
+    }
+
+    nav.active .nav-links {
+        flex-direction: column;
+        gap: 20px;
+        align-items: left;
+        justify-content: flex-start;
+        /* left: 0px; */
+        /* top: 60px; */
+        /* width: 100vw;
+        border-left: 12px; */
+    }
+
+    nav.active .nav-links li a {
+        align-items: center;
+        font-size: 12pt;
+    }
+
+    .menu-btn {
+        display: block;
+        margin-right: 8px;
+    }
+
+    .menu-btn .open {
+        display: flex;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .menu-btn .close {
+        display: none;
+    }
+
+    .menu-btn .open.active {
+        display: none;
+    }
+
+    .menu-btn .close.active {
+        display: flex;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .social {
+        display: none;
+    }
+
+    .social.active {
+        display: flex;
+        /* top: 200px; */
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content {
+        padding: 10px 12px;
+        text-align: justify;
+    }
+
+    .content.active {
+        display: none;
+    }
+
+    /* .menu-content.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 12px;
+        text-align: justify;
+        height: 85vh;
+    }
+
+    .menu-content.active nav {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 12px;
+        text-align: justify;
+    }
+
+    .menu-content.active nav .nav-links {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-content.active .social {
+        display: flex;
+        padding: 10px 12px;
+        text-align: justify;
+    } */
+
+    /* nav.active {
+        display: block;
+        position: relative;
+    }
+
+    .social.active {
+        display: block;
+        position: relative;
+    }
+
+    .header {
+        flex-direction: column;
+    } */
 }
