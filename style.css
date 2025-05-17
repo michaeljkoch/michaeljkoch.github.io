@@ -44,7 +44,8 @@ body {
     justify-content: space-between;
     /* border-top: 1px solid #d8dce1; */
     border-bottom: 1px solid #d8dce1;
-    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     background-color: var(--white);
     /* width: 100%; */
     align-items: center;
@@ -154,6 +155,10 @@ nav {
         padding: 0;
     }
 
+    body.active {
+        overflow: hidden;
+    }
+
     #logo {
         margin: 10px 12px;
     }
@@ -173,8 +178,8 @@ nav {
         gap: 100px;
         left: 0;
         right: 0;
-        top: 50px;
-        height: 95vh;
+        top: 43.5px;
+        height: 100vh;
         background-color: #fff;
     }
 
@@ -235,10 +240,6 @@ nav {
     .content {
         padding: 10px 12px;
         text-align: justify;
-    }
-
-    .content.active {
-        display: none;
     }
 
     /* .menu-content.active {
